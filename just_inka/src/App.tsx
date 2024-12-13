@@ -1,27 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import Menu  from './components/Menu';
+import './App.css';
+import Header from './components/Header';
+import Section from './components/Section';
 
-class Test {
-  constructor(private name: string, private count: number) {}
-
-  public logMe(): void {
-    console.log(this.name + this.count)
-  }
-}
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const x = new Test('test', 7);
-
-  x.logMe();
-
   return (
     <>
-    <Menu />
+    <Header />
+    <Section title="O mnie" id="about"/>
+    <Section title="Galeria" id="gallery"/>
+    <Section title="Kontakt" id="contact"/>
     </>
   )
 }
 
-export default App
+export default App;
